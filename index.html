@@ -12,7 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 <style>
-.va-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.va-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 @media(max-width:1000px){.va-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.va-grid{grid-template-columns:1fr}}
 .va-card{border:1px solid var(--line);border-radius:20px;background:var(--panel);padding:24px 22px 22px;display:flex;flex-direction:column;gap:10px;transition:border-color .4s var(--ease),transform .4s var(--ease)}
@@ -35,13 +35,13 @@
 <header>
   <div class="nav">
     <a class="logo" href="./">Mae<span>.</span></a>
-    <nav aria-label="Primary"><ul><li><a href="#work">Services</a></li><li><a href="#samples">Samples</a></li><li><a href="#experience">Experience</a></li><li><a href="#about">About</a></li></ul></nav>
+    <nav aria-label="Primary"><ul><li><a href="#help">Services</a></li><li><a href="#work">Work</a></li><li><a href="#experience">Experience</a></li><li><a href="#about">About</a></li></ul></nav>
     <div class="nav-right">
       <a class="btn" href="#contact">Contact <span class="ar ne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
       <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mnav"><span></span><span></span></button>
     </div>
   </div>
-  <nav class="mnav" id="mnav" aria-label="Mobile"><a href="#work">Services</a><a href="#samples">Samples</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <nav class="mnav" id="mnav" aria-label="Mobile"><a href="#help">Services</a><a href="#work">Work</a><a href="#experience">Experience</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
 </header>
 
 <main class="wrap">
@@ -52,14 +52,21 @@
     <h1 class="rv">Real Estate<br><em class="s">Virtual Assistant</em></h1>
     <p class="rv">Design-led marketing support for U.S. real estate agents.</p>
     <div class="hero-actions rv">
-      <a class="btn" href="#samples">View Samples <span class="ar se"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 8v9H8"/></svg></span></a>
+      <a class="btn" href="#work">View My Work <span class="ar se"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7l10 10M17 8v9H8"/></svg></span></a>
       <a class="btn btn-ghost" href="mailto:norleenvillareal@gmail.com">Contact Me <span class="ar ne"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></a>
     </div>
   </section>
 
+  <section id="help">
+    <div class="sec-head split rv">
+      <div><div class="kicker">Services</div><h2>How I can <em class="s">help</em></h2></div>
+    </div>
+    <div class="va-grid"><div class="va-card rv"><span class="va-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-5-5L5 21"/></svg></span><h3>Social Media Content</h3><p>Posts, carousels and stories with copy that fits your brand, so your listings and name stay in front of people.</p><span class="va-tools">Canva · Photoshop · Illustrator</span></div><div class="va-card rv"><span class="va-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="13" height="14" rx="2"/><path d="m16 10 5-3v10l-5-3"/></svg></span><h3>Video Editing</h3><p>Property tours, reels and quick clips edited for social, with clean titles, music and subtitles.</p><span class="va-tools">Premiere Pro · Filmora · Canva</span></div><div class="va-card rv"><span class="va-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></span><h3>Marketing Materials</h3><p>Flyers, postcards, brochures and presentations for listings, open houses and client meetings.</p><span class="va-tools">InDesign · Illustrator · Canva</span></div><div class="va-card rv"><span class="va-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><h3>Email Marketing</h3><p>Newsletters and email campaigns that keep past clients and leads engaged, from layout to send.</p><span class="va-tools">Constant Contact</span></div><div class="va-card rv"><span class="va-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.1a4 4 0 0 1 0 7.8M21 21v-2a4 4 0 0 0-3-3.9"/></svg></span><h3>CRM &amp; Admin Support</h3><p>Contacts, pipelines and files kept tidy and up to date, plus the everyday tasks that keep things moving.</p><span class="va-tools">Lofty · ClickUp · Asana · Trello</span></div><div class="va-card rv"><span class="va-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span><h3>Planning &amp; Updates</h3><p>A simple content plan, posts lined up ahead of time, and regular check-ins on what's done and what's next.</p><span class="va-tools">Buffer · Lofty</span></div></div>
+  </section>
+
   <section id="work">
     <div class="sec-head split rv">
-      <div><div class="kicker">Services</div><h2>What I <em class="s">design</em></h2></div>
+      <div><div class="kicker">Portfolio</div><h2>What I <em class="s">design</em></h2></div>
     </div>
     <div class="cat-grid">
       <a class="cat-card rv" href="https://maevillareal.github.io/cre-portfolio-2026/services/offering-memorandums.html" target="_blank" rel="noopener">
@@ -90,7 +97,7 @@
         <div class="thumb"><img src="https://ucarecdn.com/c1eefee5-2a1a-4511-a45f-26894e19a878/CenturionTowerThumbnail.jpg" alt="Social Media Posts sample" loading="lazy"><span class="count">12 samples</span></div>
         <div class="body"><h3>Social Media Posts</h3><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
       </a>
-      <a class="cat-card rv" href="https://drive.google.com/drive/folders/1KnbOHx9yrsQ3K8sN15CC-O3-NMKN0I_1" target="_blank" rel="noopener">
+      <a class="cat-card rv" href="video.html">
         <div class="thumb"><img src="https://drive.google.com/thumbnail?id=1GVd7oThmNQJEZ3GuLxPDqh9U0F1YfQLA&amp;sz=w800" alt="Video sample" loading="lazy"><span class="count">5 samples</span></div>
         <div class="body"><h3>Video</h3><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
       </a>
@@ -102,51 +109,6 @@
         <div class="thumb"><img src="https://ucarecdn.com/c422226a-9f4f-45d8-a79f-0558e91040b7/CWThumbnail.jpg" alt="Brand Identity sample" loading="lazy"><span class="count">4 samples</span></div>
         <div class="body"><h3>Brand Identity</h3><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></span></div>
       </a>
-    </div>
-  </section>
-
-  <section id="samples">
-    <div class="gallery-head rv">
-      <div><div class="kicker">Samples</div><h2>Work I <em class="s">personally</em> created</h2></div>
-      <p>Click any image to enlarge · Videos and PDFs open in a new tab</p>
-    </div>
-    <p class="va-note rv">Videos edited by me. All graphics designed by me using <b>Canva, Illustrator, Photoshop and InDesign</b>. Newsletters and email blasts were designed by me and <b>uploaded and scheduled in Constant Contact</b>.</p>
-    <div class="cat-chips rv" id="filters" style="margin-bottom:28px">
-      <button class="active" data-cat="all">All <span>28</span></button>
-      <button data-cat="video">Videos <span>5</span></button>
-      <button data-cat="social">Social Media Graphics <span>12</span></button>
-      <button data-cat="email">Newsletters &amp; Emails <span>3</span></button>
-      <button data-cat="print">Flyers &amp; Postcards <span>8</span></button>
-    </div>
-    <div class="masonry" id="allGrid">
-<a class="m-card rv" data-cat="video" href="https://drive.google.com/file/d/1YZ6hMSG6Jg58LZem-P5NTY57xRSDlQMx/view" target="_blank" rel="noopener"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=1YZ6hMSG6Jg58LZem-P5NTY57xRSDlQMx&amp;sz=w800" alt="Property Video — NHN Cowboy Trail" loading="lazy"><span class="tag">Play video</span></div><div class="m-info"><h3>Property Video</h3><p class="proj">NHN Cowboy Trail</p></div></a>
-<a class="m-card rv" data-cat="video" href="https://drive.google.com/file/d/1GVd7oThmNQJEZ3GuLxPDqh9U0F1YfQLA/view" target="_blank" rel="noopener"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=1GVd7oThmNQJEZ3GuLxPDqh9U0F1YfQLA&amp;sz=w800" alt="Property Video — 21 Seaway Drive, Welland, ON" loading="lazy"><span class="tag">Play video</span></div><div class="m-info"><h3>Property Video</h3><p class="proj">21 Seaway Drive, Welland, ON</p></div></a>
-<a class="m-card rv" data-cat="video" href="https://drive.google.com/file/d/1mTsvuyT11Af5iFRbfD1YonAdttzkxqsB/view" target="_blank" rel="noopener"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=1mTsvuyT11Af5iFRbfD1YonAdttzkxqsB&amp;sz=w800" alt="LinkedIn Montage Video — McDonald's Palmdale" loading="lazy"><span class="tag">Play video</span></div><div class="m-info"><h3>LinkedIn Montage Video</h3><p class="proj">McDonald's Palmdale</p></div></a>
-<a class="m-card rv" data-cat="video" href="https://drive.google.com/file/d/1PHk6eWJydVkPi7iediOvCuGz-kKJloxI/view" target="_blank" rel="noopener"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=1PHk6eWJydVkPi7iediOvCuGz-kKJloxI&amp;sz=w800" alt="Team Listing Video — 17640 Bellflower Blvd" loading="lazy"><span class="tag">Play video</span></div><div class="m-info"><h3>Team Listing Video</h3><p class="proj">17640 Bellflower Blvd</p></div></a>
-<a class="m-card rv" data-cat="video" href="https://drive.google.com/file/d/14PwSs0-47ETRZkyh7sO91aNe4koDWpIq/view" target="_blank" rel="noopener"><div class="thumb"><img src="https://drive.google.com/thumbnail?id=14PwSs0-47ETRZkyh7sO91aNe4koDWpIq&amp;sz=w800" alt="Broker Listing Video — 1200–1228 S Greenwood Ave, Montebello" loading="lazy"><span class="tag">Play video</span></div><div class="m-info"><h3>Broker Listing Video</h3><p class="proj">1200–1228 S Greenwood Ave, Montebello</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/0a74deae-17bd-4cbb-8325-582cc02a1881/AlexDelannoy4223SPipkinRdSMPThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/0a74deae-17bd-4cbb-8325-582cc02a1881/AlexDelannoy4223SPipkinRdSMPThumbnail.jpg" alt="Open House Post — 4223 S Pipkin Rd" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Open House Post</h3><p class="proj">4223 S Pipkin Rd</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/49ecf0e2-56dd-44a7-b08d-141b1dd92b97/281HighlandAveThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/49ecf0e2-56dd-44a7-b08d-141b1dd92b97/281HighlandAveThumbnail.jpg" alt="Listing Post — 281 Highland Ave" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Listing Post</h3><p class="proj">281 Highland Ave</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/9a1a46dd-7a64-45b5-9dc1-32d172c0af2f/5083WindermereBlvdThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/9a1a46dd-7a64-45b5-9dc1-32d172c0af2f/5083WindermereBlvdThumbnail.jpg" alt="Listing Post — 5083 Windermere Blvd" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Listing Post</h3><p class="proj">5083 Windermere Blvd</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/b638e074-0af1-4e14-8e3c-775d404ce715/NavigatingSaleLeasebackThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/b638e074-0af1-4e14-8e3c-775d404ce715/NavigatingSaleLeasebackThumbnail.jpg" alt="Educational Post — Navigating Sale-Leaseback" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Educational Post</h3><p class="proj">Navigating Sale-Leaseback</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/93e9b947-cb77-4d5d-8d18-743a465fc550/2LinkedinpostsEngleREThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/93e9b947-cb77-4d5d-8d18-743a465fc550/2LinkedinpostsEngleREThumbnail.jpg" alt="LinkedIn Post Series — Engle Real Estate" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>LinkedIn Post Series</h3><p class="proj">Engle Real Estate</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/6e45bd0e-b413-4dc3-8c5f-691b88ec7b04/1560OrangeAveThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/6e45bd0e-b413-4dc3-8c5f-691b88ec7b04/1560OrangeAveThumbnail.jpg" alt="Listing Post — 1560 Orange Ave" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Listing Post</h3><p class="proj">1560 Orange Ave</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/af44dd73-bf76-4ebc-81ff-5697e076787c/203205RidgelyAvePressReleaseThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/af44dd73-bf76-4ebc-81ff-5697e076787c/203205RidgelyAvePressReleaseThumbnail.jpg" alt="Press Release Post — 203–205 Ridgely Ave" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Press Release Post</h3><p class="proj">203–205 Ridgely Ave</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/6fa4c674-b762-4fc8-bb38-a749a3d10184/50MainStreetSMPThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/6fa4c674-b762-4fc8-bb38-a749a3d10184/50MainStreetSMPThumbnail.jpg" alt="Listing Post — 50 Main Street" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Listing Post</h3><p class="proj">50 Main Street</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/c1eefee5-2a1a-4511-a45f-26894e19a878/CenturionTowerThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/c1eefee5-2a1a-4511-a45f-26894e19a878/CenturionTowerThumbnail.jpg" alt="Listing Post — Centurion Tower" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Listing Post</h3><p class="proj">Centurion Tower</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/87587529-b1f7-4dd4-89a7-c0cfc1150a09/TechVillageStudentLivingThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/87587529-b1f7-4dd4-89a7-c0cfc1150a09/TechVillageStudentLivingThumbnail.jpg" alt="Listing Post — Tech Village Student Living" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Listing Post</h3><p class="proj">Tech Village Student Living</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/5227f301-1464-4a0c-b351-7f3cdbe4657d/425PageMillRdThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/5227f301-1464-4a0c-b351-7f3cdbe4657d/425PageMillRdThumbnail.jpg" alt="Listing Post — 425 Page Mill Rd" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Listing Post</h3><p class="proj">425 Page Mill Rd</p></div></a>
-<a class="m-card rv" data-cat="social" href="https://ucarecdn.com/9feb47d3-3d1a-4a92-9a14-8e09451639c4/Cubework10100WesternAveSMPThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/9feb47d3-3d1a-4a92-9a14-8e09451639c4/Cubework10100WesternAveSMPThumbnail.jpg" alt="Listing Post — Cubework · S Western Ave" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Listing Post</h3><p class="proj">Cubework · S Western Ave</p></div></a>
-<a class="m-card rv" data-cat="email" href="https://ucarecdn.com/d17a5e6f-bef3-451f-81bc-9e21f1a71fec/BerubeCoInceblast.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/d17a5e6f-bef3-451f-81bc-9e21f1a71fec/BerubeCoInceblast.jpg" alt="Email Blast — Berube &amp; Co" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Email Blast</h3><p class="proj">Berube &amp; Co</p></div></a>
-<a class="m-card rv" data-cat="email" href="https://ucarecdn.com/f53280f3-bcd4-499f-a917-17668d56971a/iconmd.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/f53280f3-bcd4-499f-a917-17668d56971a/iconmd.jpg" alt="Agent Newsletter" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Agent Newsletter</h3></div></a>
-<a class="m-card rv" data-cat="email" href="https://ucarecdn.com/b83860c3-dd3f-4d73-8fa6-cb82c7154111/Mailertimg.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/b83860c3-dd3f-4d73-8fa6-cb82c7154111/Mailertimg.jpg" alt="Mailer Template — Christian Reid" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Mailer Template</h3><p class="proj">Christian Reid</p></div></a>
-<a class="m-card rv" data-cat="print" href="https://ucarecdn.com/717f68b8-1336-48f7-86b2-634575869951/ThankYouPostcardtimg.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/717f68b8-1336-48f7-86b2-634575869951/ThankYouPostcardtimg.jpg" alt="Thank You Postcard — Platinum Access" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Thank You Postcard</h3><p class="proj">Platinum Access</p></div></a>
-<a class="m-card rv" data-cat="print" href="https://ucarecdn.com/42556653-44c0-4d23-bf47-06b124fcd52a/1thingpostcardtimg.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/42556653-44c0-4d23-bf47-06b124fcd52a/1thingpostcardtimg.jpg" alt="Marketing Postcard — City Commercial" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Marketing Postcard</h3><p class="proj">City Commercial</p></div></a>
-<a class="m-card rv" data-cat="print" href="https://ucarecdn.com/a0eaf277-0eea-4569-ad34-5b60dbbb9eca/2550BroadStThumbnail.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/a0eaf277-0eea-4569-ad34-5b60dbbb9eca/2550BroadStThumbnail.jpg" alt="Property Development Postcard — 2550 Broad St" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Property Development Postcard</h3><p class="proj">2550 Broad St</p></div></a>
-<a class="m-card rv" data-cat="print" href="https://ucarecdn.com/7d335ea1-1a6e-4c4b-86e7-3bb617dcf88f/1500Pinecrofttimg.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/7d335ea1-1a6e-4c4b-86e7-3bb617dcf88f/1500Pinecrofttimg.jpg" alt="Property Flyer — 1500 Pinecroft" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Property Flyer</h3><p class="proj">1500 Pinecroft</p></div></a>
-<a class="m-card rv" data-cat="print" href="files/Vantix%20Medical%20Flyer.pdf" target="_blank" rel="noopener"><div class="thumb"><img src="https://ucarecdn.com/e57bd0d7-01ec-4a5f-9f60-1b2f4ff460f3/vantixmedicaltimg.jpg" alt="Medical Office Flyer — Vantix Medical" loading="lazy"><span class="tag">Open PDF</span></div><div class="m-info"><h3>Medical Office Flyer</h3><p class="proj">Vantix Medical</p></div></a>
-<a class="m-card rv" data-cat="print" href="files/4001%20Old%20Hwy%20Flyer.pdf" target="_blank" rel="noopener"><div class="thumb"><img src="https://ucarecdn.com/667d8b8c-c8b8-426d-9b46-1389a4960769/4001timg.jpg" alt="Property Flyer — 4001 Old Hwy" loading="lazy"><span class="tag">Open PDF</span></div><div class="m-info"><h3>Property Flyer</h3><p class="proj">4001 Old Hwy</p></div></a>
-<a class="m-card rv" data-cat="print" href="files/Stellar%20Company%20Brochure.pdf" target="_blank" rel="noopener"><div class="thumb"><img src="https://ucarecdn.com/e0efaa76-486a-4608-8ad4-2702502c4750/stellarcompanybrochuretimg.jpg" alt="Company Brochure — Stellar" loading="lazy"><span class="tag">Open PDF</span></div><div class="m-info"><h3>Company Brochure</h3><p class="proj">Stellar</p></div></a>
-<a class="m-card rv" data-cat="print" href="https://ucarecdn.com/3bb835ff-8a89-4d70-885b-963e0a25d31d/SFStimg.jpg" data-lightbox="work"><div class="thumb"><img src="https://ucarecdn.com/3bb835ff-8a89-4d70-885b-963e0a25d31d/SFStimg.jpg" alt="Property Flyer — SFS" loading="lazy"><span class="tag">Enlarge</span></div><div class="m-info"><h3>Property Flyer</h3><p class="proj">SFS</p></div></a>
     </div>
   </section>
 
@@ -211,9 +173,10 @@
       <div class="about-copy rv">
         <div class="kicker">About</div>
         <h2>Hi, I'm <em class="s">Mae</em></h2>
-        <p class="lead">Graphic and web designer with over ten years of experience, now specializing in real estate graphic design — delivering minimalist, visually striking work.</p>
-        <p>My design philosophy centers on simplicity and clean aesthetics: less is more, and effective communication comes through thoughtful design. I take a fresh approach to each project, making sure my clients' vision is understood and delivered.</p>
-        <p>Outside of designing, I enjoy the outdoors, music, and reading — a good hike or a quiet walk is usually where the next idea shows up.</p>
+        <p class="lead">Real estate virtual assistant helping agents stay consistent with their marketing, follow-ups and day-to-day tasks.</p>
+        <p>I've spent over ten years in marketing and creative work, six of them supporting real estate teams. I take care of content, emails, CRM updates and the small tasks that pile up, so agents can focus on their clients and closings.</p>
+        <p>I'm organized, dependable and easy to work with. I follow instructions closely, keep you updated, and treat your business like it matters, because it does.</p>
+        <p>Outside of work, I enjoy the outdoors, music, and reading.</p>
       </div>
     </div>
   </section>
