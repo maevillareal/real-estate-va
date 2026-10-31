@@ -192,3 +192,74 @@
     });
   });
 })();
+
+// live video thumbnails: load lazily, play muted only while on screen
+(function(){
+  const vids=[...document.querySelectorAll('video[data-preview]')];
+  if(!vids.length)return;
+  const still=matchMedia('(prefers-reduced-motion:reduce)').matches||(navigator.connection&&navigator.connection.saveData);
+  if(still||!('IntersectionObserver' in window))return; // posters only
+  let paused=false,raf=0;
+  const bars=new Map(vids.map(v=>{const r=v.closest('.reel');return [v,r?r.querySelector('.reel-bar i'):null];}));
+  const play=v=>{if(paused||!v._vis)return;if(!v.getAttribute('src'))v.src=v.dataset.preview;const p=v.play();if(p)p.catch(()=>{});};
+  function tick(){
+    let any=false;
+    bars.forEach((bar,v)=>{if(bar&&!v.paused&&v.duration){bar.style.transform='scaleX('+(v.currentTime/v.duration)+')';any=true;}});
+    raf=any?requestAnimationFrame(tick):0;
+  }
+  vids.forEach(v=>{
+    const r=v.closest('.reel');
+    v.addEventListener('playing',()=>{if(r)r.classList.add('is-playing');if(!raf)raf=requestAnimationFrame(tick);});
+    v.addEventListener('pause',()=>{if(r)r.classList.remove('is-playing');});
+  });
+  const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;v._vis=e.isIntersecting;if(v._vis)play(v);else v.pause();}),{threshold:.3});
+  vids.forEach(v=>io.observe(v));
+  document.addEventListener('vt:open',()=>{paused=true;vids.forEach(v=>v.pause());});
+  document.addEventListener('vt:close',()=>{paused=false;vids.forEach(play);});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)vids.forEach(v=>v.pause());else if(!paused)vids.forEach(play);});
+})();
+
+// video theater: reels play with sound, prev/next, ambient glow
+(function(){
+  const vt=document.getElementById('vt');if(!vt)return;
+  const vid=vt.querySelector('video'),amb=vt.querySelector('.vt-amb'),inner=vt.querySelector('.vt-inner');
+  const kEl=vt.querySelector('.vt-k'),tEl=vt.querySelector('.vt-cap b'),sEl=vt.querySelector('.vt-sub'),cEl=vt.querySelector('.vt-count');
+  const prev=vt.querySelector('.vt-prev'),next=vt.querySelector('.vt-next'),close=vt.querySelector('.vt-close');
+  let set=[],i=0,last=null;
+  function show(){
+    const b=set[i];
+    vid.pause();vid.poster=b.dataset.poster;vid.src=b.dataset.src;
+    amb.style.backgroundImage='url("'+b.dataset.poster+'")';
+    kEl.textContent='Reel '+String(i+1).padStart(2,'0');
+    tEl.textContent=b.dataset.title;sEl.textContent=b.dataset.sub;
+    cEl.textContent=(i+1)+' / '+set.length;
+    prev.disabled=next.disabled=set.length<2;
+    const p=vid.play();if(p)p.catch(()=>{});
+  }
+  function open(b){
+    last=b;set=[...document.querySelectorAll('[data-reel="'+b.dataset.reel+'"]')];i=Math.max(0,set.indexOf(b));
+    vt.classList.add('open');document.body.style.overflow='hidden';
+    document.dispatchEvent(new Event('vt:open'));show();close.focus({preventScroll:true});
+  }
+  function hide(){
+    vt.classList.remove('open');vid.pause();vid.removeAttribute('src');vid.load();document.body.style.overflow='';
+    document.dispatchEvent(new Event('vt:close'));if(last)last.focus({preventScroll:true});
+  }
+  function step(d){i=(i+d+set.length)%set.length;show();}
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-reel]');if(b){e.preventDefault();open(b);}});
+  prev.onclick=()=>step(-1);next.onclick=()=>step(1);close.onclick=hide;
+  vt.addEventListener('click',e=>{if(e.target===vt||e.target===inner)hide();});
+  vid.addEventListener('ended',()=>{if(i<set.length-1)step(1);});
+  document.addEventListener('keydown',e=>{
+    if(!vt.classList.contains('open'))return;
+    if(e.key==='Escape')hide();
+    else if(e.target!==vid&&e.key==='ArrowRight')step(1);
+    else if(e.target!==vid&&e.key==='ArrowLeft')step(-1);
+    else if(e.key==='Tab'){
+      const f=[...vt.querySelectorAll('button:not(:disabled),video')];
+      const a=f[0],z=f[f.length-1];
+      if(e.shiftKey&&document.activeElement===a){e.preventDefault();z.focus();}
+      else if(!e.shiftKey&&document.activeElement===z){e.preventDefault();a.focus();}
+    }
+  });
+})();
