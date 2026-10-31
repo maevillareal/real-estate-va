@@ -73,9 +73,12 @@
 (function(){
   const lb=document.getElementById('lb');if(!lb)return;
   const img=lb.querySelector('img'),cap=lb.querySelector('.lb-cap');
+  const sc=document.createElement('div');sc.className='lb-scroll';img.replaceWith(sc);sc.appendChild(img);
   let set=[],idx=0,last=null;
   function show(){
     const a=set[idx];
+    const tall=a.hasAttribute('data-tall');
+    lb.classList.toggle('scroll',tall);sc.scrollTop=0;
     img.src=a.getAttribute('href');
     const t=a.querySelector('h3'),p=a.querySelector('.proj');
     const label=a.dataset.caption||(t?t.textContent+(p?' — '+p.textContent:''):'');
@@ -89,13 +92,13 @@
     idx=Math.max(0,set.indexOf(a));show();lb.classList.add('open');document.body.style.overflow='hidden';
     lb.querySelector('.lb-close').focus();
   }
-  function close(){lb.classList.remove('open');document.body.style.overflow='';img.removeAttribute('src');if(last)last.focus();}
+  function close(){lb.classList.remove('open','scroll');document.body.style.overflow='';img.removeAttribute('src');if(last)last.focus();}
   function step(d){idx=(idx+d+set.length)%set.length;show();}
   document.addEventListener('click',e=>{const a=e.target.closest('[data-lightbox]');if(a){e.preventDefault();open(a);}});
   lb.querySelector('.lb-close').onclick=close;
   lb.querySelector('.lb-prev').onclick=()=>step(-1);
   lb.querySelector('.lb-next').onclick=()=>step(1);
-  lb.addEventListener('click',e=>{if(e.target===lb)close();});
+  lb.addEventListener('click',e=>{if(e.target===lb||e.target===sc)close();});
   document.addEventListener('keydown',e=>{
     if(!lb.classList.contains('open'))return;
     if(e.key==='Escape')close();

@@ -486,3 +486,28 @@ footer{position:relative;overflow:hidden;border-top:1px solid var(--line);paddin
 .reels-solo{grid-template-columns:1fr;grid-template-rows:auto;grid-template-areas:"track"}
 .reels-solo .reels-track{max-width:980px;width:100%;margin:0 auto}
 @media(max-width:560px){.reels-solo .reels-track{margin:0 -8px;width:auto;max-width:none}}
+
+/* ---------- email marketing gallery (paper mockups) ---------- */
+.em-head{margin-top:72px}
+.em-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.em-grid .m-card{margin:0;display:flex;flex-direction:column;min-width:0}
+.em-grid .m-card .thumb{aspect-ratio:1/1;background:#d6e4f1}
+.em-grid .m-card .thumb img{width:100%;height:100%;object-fit:cover}
+.em-grid > .em-card:nth-child(1){grid-column:1/3;grid-row:1/3}
+.em-grid > .em-card:nth-child(8){grid-column:3/5;grid-row:3/5}
+.em-grid > .em-card:is(:nth-child(1),:nth-child(8)) .thumb{aspect-ratio:auto;flex:1;min-height:0}
+.em-grid > .em-card:is(:nth-child(1),:nth-child(8)) h3{font-size:1.2rem}
+.em-paper{display:flex;align-items:center;justify-content:center;background:#d6e4f1 url("../media/email/paper-bg.jpg") center/cover no-repeat!important}
+.em-grid .m-card .em-paper img{width:auto;height:83%;max-width:80%;object-fit:contain;box-shadow:0 4px 22px -2px rgba(16,32,58,.45)}
+@media(max-width:1060px){.em-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .em-grid > .em-card:is(:nth-child(1),:nth-child(8)){grid-column:1/-1;grid-row:auto}
+  .em-grid > .em-card:is(:nth-child(1),:nth-child(8)) .thumb{aspect-ratio:1/1;flex:none}}
+@media(max-width:560px){.em-grid{grid-template-columns:1fr}.em-head{margin-top:40px}}
+
+/* lightbox: tall images (emails) scroll at a readable width */
+.lb-scroll{display:contents}
+.lb.scroll .lb-scroll{display:block;position:absolute;inset:0;overflow-y:auto;overscroll-behavior:contain;padding:76px 16px 110px;-webkit-overflow-scrolling:touch}
+.lb.scroll img{display:block;width:min(640px,100%);max-width:none;max-height:none;height:auto;margin:0 auto;border-radius:10px}
+.lb.scroll button{z-index:2}
+.lb.scroll .lb-cap{z-index:2;left:50%;right:auto;transform:translateX(-50%);width:max-content;max-width:calc(100% - 32px);
+  color:var(--white);background:rgba(10,13,9,.85);border:1px solid var(--line-2);border-radius:100px;padding:8px 16px}
